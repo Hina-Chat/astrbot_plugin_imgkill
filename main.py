@@ -4,6 +4,7 @@ from astrbot.api.event.filter import EventMessageType
 from astrbot.api.message_components import Image
 import logging
 
+
 class ImageKill(Star):
     """
     拦截圖檔訊息，阻止其發送給 LLM。
@@ -20,7 +21,9 @@ class ImageKill(Star):
         """
         if any(isinstance(segment, Image) for segment in event.message_obj.message):
             event.stop_event()
-            self.logger.info(f"Image message from {event.get_sender_id()} intercepted by ImageKill plugin.")
+            self.logger.info(
+                f"Image message from {event.get_sender_id()} intercepted by ImageKill plugin."
+            )
 
     async def terminate(self):
         """
