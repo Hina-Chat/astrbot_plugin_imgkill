@@ -1,0 +1,5 @@
+name: astrbot_plugin_imgkill
+desc: 拦截圖檔訊息，阻止其發送給 LLM。
+author: Magstic, Gemini 2.5 Pro
+version: "0.1.0"
+repo: https://github.com/Hina-Chat/astrbot_plugin_imgkill
